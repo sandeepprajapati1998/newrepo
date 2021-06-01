@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="medium">
+    <ion-buttons >
+      <ion-back-button slot="end" herf="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Calculator</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h1 class="myval">{{initialValue}} {{inputoperator}}</h1>
+
+  <ion-list *ngFor="let item of allNumberGroup">
+    <ion-label *ngFor="let myitem of item">
+      <ion-button (click)="numBtn(myitem)"  color="dark" class="test">
+        {{myitem}}
+      </ion-button>
+    </ion-label>
+ 
+  </ion-list>
+
+</ion-content>
